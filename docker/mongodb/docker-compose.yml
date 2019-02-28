@@ -1,0 +1,18 @@
+version: '3.2'
+
+services:
+  mongodb:
+#    volumes:
+#      - ./db:/data/db
+    command: --smallfiles
+    ports:
+      - 127.0.0.1:27017:27017
+    image: mongo:3
+
+  # mongo-express:
+  #  image: mongo-express
+  #  restart: always
+  #  depends_on:
+  #   - mongodb
+  #  ports:
+  #    - 8081:8081

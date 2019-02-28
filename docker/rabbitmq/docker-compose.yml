@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-alpine
+    ports:
+      - 127.0.0.1:5672:5672
+#    volumes:
+#      - ./rabbitdata:/var/lib/rabbitmq
+    environment:
+      - RABBITMQ_HIPE_COMPILE=0
+#  rabbit_manage:
+#    image: rabbitmq:3-management-alpine
+#    ports:
+#      - 127.0.0.1:15672:15672

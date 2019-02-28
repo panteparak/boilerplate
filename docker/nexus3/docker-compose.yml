@@ -1,0 +1,18 @@
+version: "3.5"
+
+networks:
+  reverse_proxy:
+    external:
+      name: "reverse_proxy"
+
+
+services:
+  nexus:
+    image: sonatype/nexus3
+    netwokrs:
+      - reverse_proxy
+#    volumes:
+#      - ./data/nexus-data:/nexus-data
+    environment:
+      - VIRTUAL_HOST=artifactuat.teparak.me
+      - LETSENCRYPT_HOST=artifactuat.teparak.me

@@ -1,0 +1,9 @@
+version: '3.5'
+
+services:
+  artifactory:
+    image: docker.bintray.io/jfrog/artifactory-cpp-ce
+    environment:
+      - VIRTUAL_HOST=maven.teparak.me
+      - LETSENCRYPT_HOST=maven.teparak.me
+      - LETSENCRYPT_EMAIL=pan.teparak@gmail.com
